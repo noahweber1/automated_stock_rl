@@ -1,3 +1,3 @@
 from .data_scraping import load_stock_data
 
-__version__ = '3.0'
+__version__ = '4.0'

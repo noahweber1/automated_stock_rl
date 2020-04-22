@@ -1,5 +1,6 @@
 import time
 import urllib
+import pandas as pd
 # Build the cookie handler
 cookier = urllib.request.HTTPCookieProcessor()
 opener = urllib.request.build_opener(cookier)
