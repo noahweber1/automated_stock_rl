@@ -1,7 +1,2 @@
-time
-random
-chainer
-copy
-pandas
-numpy
-matplotlib
+numpy>=1.17
+pandas>=0.24
