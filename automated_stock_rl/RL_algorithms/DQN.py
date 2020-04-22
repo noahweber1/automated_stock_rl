@@ -4,7 +4,6 @@ import pandas as pd
 import time
 import copy
 import chainer
-import random
 import chainer.functions as funcs
 import chainer.links as links	
 import matplotlib.pyplot as plt
@@ -146,7 +145,7 @@ def dqn_training(stock_environment):
             # choose randomly one of our 3 possible actions, buy hold and sell. Following three lines of code will perform the
             # epsilon greedy policy, i.e. exploration and exploitation and if we are exploiting than we will take the
             # policy out of these 3 that have the maximal Q-value
-            max_step = random.choice([0,1,2])
+            max_step = np.random.randint(2)
             if np.random.rand() > epsilon:
                 max_step = Q_function(np.array(history_pos_value_r, dtype=np.float32).reshape(1, -1))
                 max_step = np.argmax(max_step.data)
@@ -263,7 +262,7 @@ def ddqn_training(stock_environment):
             # choose randomly one of our 3 possible actions, buy hold and sell. Following three lines of code will perform the
             # epsilon greedy policy, i.e. exploration and exploitation and if we are exploiting than we will take the
             # policy out of these 3 that have the maximal Q-value
-            max_step = random.choice([0,1,2])
+            max_step = np.random.randint(2)
             if np.random.rand() > epsilon:
                 max_step = Q_function(np.array(history_pos_value_r, dtype=np.float32).reshape(1, -1))
                 max_step = np.argmax(max_step.data)
@@ -412,7 +411,7 @@ def dddqn_training(stock_environment):
             # choose randomly one of our 3 possible actions, buy hold and sell. Following three lines of code will perform the
             # epsilon greedy policy, i.e. exploration and exploitation and if we are exploiting than we will take the
             # policy out of these 3 that have the maximal Q-value
-            max_step = random.choice([0,1,2])
+            max_step = np.random.randint(2)
             if np.random.rand() > epsilon:
                 max_step = Q_function(np.array(history_pos_value_r, dtype=np.float32).reshape(1, -1))
                 max_step = np.argmax(max_step.data)
