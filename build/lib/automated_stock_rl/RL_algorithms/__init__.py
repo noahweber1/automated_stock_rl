@@ -1,1 +1,1 @@
-from DQN import run_dqn_algorithm
+from .DQN import run_dqn_algorithm
