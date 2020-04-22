@@ -10,11 +10,11 @@ setup(
     url='https://github.com/noahweber1/automated_stock_rl',
     download_url='https://github.com/noahweber1/automated_stock_rl',
     install_requires=['time',
-                      'random',
                       'chainer',
                       'copy',
                       'pandas',
-                      'numpy','matplotlib'],
+                      'numpy',
+			'matplotlib'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
