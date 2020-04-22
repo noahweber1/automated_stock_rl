@@ -2,7 +2,7 @@ from setuptools import setup
 from setuptools import find_packages
 setup(
     name='automated_stock_rl',
-    version='17.0',
+    version='18.0',
     description='Automated Stock Reinforcement Learning',
     long_description=open('README.md').read(),
     author='Noah Weber',

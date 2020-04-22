@@ -475,11 +475,11 @@ def dddqn_training(stock_environment):
     return total_rewards
     
 
-def run_dqn_algorithm(algorithm, stock_data):
+def run_dqn_algorithm(stock, algorithm):
 	if algorithm=="DQN":
-		return(dqn_training(Stock_environment(stock_data)))
+		return(dqn_training(Stock_environment(stock)))
 	elif algorithm=="DDQN":
-		return(ddqn_training(Stock_environment(stock_data)))
+		return(ddqn_training(Stock_environment(stock)))
 	elif algorithm=="DDDQN":
-		return(dddqn_training(Stock_environment(stock_data)))
+		return(dddqn_training(Stock_environment(stock)))
 	else: return("RL algorithm not available")
