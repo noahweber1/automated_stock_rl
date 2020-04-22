@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from .preprocessing import load_stock_data
-from .RL_algorithms import run_dqn_algorithm, run_ddqn_algorithm, run_dddqn_algorithm
+from .RL_algorithms import run_dqn_algorithm
 
 def trade(stock,algorithm):
 	data=load_stock_data(stock)
