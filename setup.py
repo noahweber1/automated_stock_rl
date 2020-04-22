@@ -1,4 +1,4 @@
-from setuptools import setup
+	from setuptools import setup
 from setuptools import find_packages
 setup(
     name='automated_stock_rl',
@@ -9,12 +9,8 @@ setup(
     author_email='noahweber53@ygmail.com',
     url='https://github.com/noahweber1/automated_stock_rl',
     download_url='https://github.com/noahweber1/automated_stock_rl',
-    install_requires=['time',
-                      'chainer',
-                      'copy',
-                      'pandas',
-                      'numpy',
-			'matplotlib'],
+    install_requires=['numpy>=1.17',
+                      'pandas>=0.24'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
