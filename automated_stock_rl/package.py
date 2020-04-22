@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 from .preprocessing import load_stock_data
 from .RL_algorithms import run_dqn_algorithm
 
-def trade(stock, algorithm, start_date, end_date):
-	data=load_stock_data(stock, start_date, end_date)
+def trade(stock, algorithm):
+	data=load_stock_data(stock)
 	returns=run_dqn_algorithm(data,algorithm)
 	
 	plt.plot(range(70), returns, marker='o', linestyle='--', color='g', label='Square') 

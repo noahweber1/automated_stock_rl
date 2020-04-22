@@ -92,9 +92,9 @@ def load_yahoo_quote(ticker, begindate, enddate, info='quote'):
     # print(alines)
     return alines.split('\n')
 
-def load_stock_data(stock_ticker,start_date,end_date):
+def load_stock_data(stock_ticker):
 	all_data=[]
-	for data in load_yahoo_quote(stock_ticker, start_date, end_date)[1:]:
+	for data in load_yahoo_quote(stock_ticker, '20170722', '20180725')[1:]:
     		all_data.append(data.split(","))
 
 	scraped_df=pd.DataFrame(all_data,columns=load_yahoo_quote(stock_ticker, start_date, end_date)[0].split(","))
